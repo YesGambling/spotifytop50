@@ -5,22 +5,23 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.shivenanddaniel</groupId>
-  <artifactId>spotifytop200</artifactId>
+  <artifactId>spotifytop50</artifactId>
   <version>1.0</version>
   
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
   </properties>
   
   <dependencies>
+    <!-- Spotify Web API Java: A Java wrapper for the Spotify Web API -->
     <dependency>
       <groupId>se.michaelthelin.spotify</groupId>
       <artifactId>spotify-web-api-java</artifactId>
       <version>6.5.2</version>
     </dependency>
   </dependencies>
-  
+  <!-- Apache HttpComponents: A toolset for building HTTP services -->
   <build>
     <plugins>
       <plugin>
@@ -32,3 +33,5 @@
   </build>
   
 </project>
+
+<!-- this imports maven such-->
