@@ -10,16 +10,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class spotifytop200 {
-    private static final String clientId = "9a29e2ff97c44483b531227c22083cb8";
-    private static final String clientSecret = "b611950d144d460ab1472dadc18fbd23";
 
     public static void main(String[] args) {
-        SpotifyApi spotifyApi = new SpotifyApi.Builder()
-                .setClientId(clientId)
-                .setClientSecret(clientSecret)
-                .build();
-
-        getTopSongs(spotifyApi);
+        SpotifyAuthenticator authenticator = new SpotifyAuthenticator();
+        try {
+            SpotifyApi spotifyApi = authenticator.authenticate();
+            getTopSongs(spotifyApi);
+        } catch (IOException | SpotifyWebApiException | ParseException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }
 
     private static void getTopSongs(SpotifyApi spotifyApi) {
@@ -42,6 +41,8 @@ public class spotifytop200 {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number between 1 and 200.");
+            } finally {
+                scanner.close();
             }
         } catch (IOException | SpotifyWebApiException | ParseException e) {
             System.out.println("An error occurred: " + e.getMessage());
