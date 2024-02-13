@@ -1,3 +1,6 @@
+/*
+ * this file will handle the Spotify OAuth services. 
+ */
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.requests.authorization.client_credentials.ClientCredentialsRequest;
