@@ -33,3 +33,10 @@ auth file
 example
 
 ![image-mh](https://github.com/LQ84i-1/spot200/assets/155986030/237db0dc-ee5d-414a-86da-02c4e3fdc249)
+
+
+
+
+
+later to do: add the ability to get the song's website url, or search for more songs. the ability to add it to a list and then output the links
+when you are finished with it.
