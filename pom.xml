@@ -34,4 +34,4 @@
   
 </project>
 
-<!-- this imports maven such-->
+<!-- this imports maven and adds the correct dependencies to intergrate the spotify web API java services and the http components for the http services-->
