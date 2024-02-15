@@ -13,7 +13,8 @@ screenshots of code:
 
 main file
 
-![image](https://github.com/LQ84i-1/spot200/assets/155986030/06e8a88f-f63e-4fbe-9096-b31d3837fba1)
+![image](https://github.com/orangejuiceplz/spot50/assets/155986030/d2e09c43-9f11-41d4-8b64-6318a19f1174)
+
 
 
 
@@ -27,12 +28,14 @@ pom.xml
 
 auth file
 
-![image](https://github.com/LQ84i-1/spot200/assets/155986030/757b862d-f3cc-49ad-b495-393ecb073c45)
+![image](https://github.com/orangejuiceplz/spot50/assets/155986030/e387e910-6d9a-4261-bb0b-7c27be1af7f9)
+
 
 
 example
 
-![image-mh](https://github.com/LQ84i-1/spot200/assets/155986030/237db0dc-ee5d-414a-86da-02c4e3fdc249)
+![image](https://github.com/orangejuiceplz/spot50/assets/155986030/853e18da-0125-4a90-8977-ab41d02b934a)
+
 
 
 
