@@ -25,7 +25,7 @@ And of course:
 
 >Spotify Developer Docs - https://developer.spotify.com/documentation/web-api
 
->@NoGambling1/@YesGambling for assistance w/ compiling & writing some of spotifytop50 and SpotifyAuthenticator - view their pages here: https://github.com/NoGambling1 and >https://github.com/YesGambling respectively.
+>@NoGambling1/@YesGambling for assistance w/ compiling & writing some of spotifytop50 and SpotifyAuthenticator - view their pages here: https://github.com/NoGambling1 and https://github.com/YesGambling respectively.
 
 >@S-lices for motivational support - view their page here: https://github.com/S-lices
 
