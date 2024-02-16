@@ -9,7 +9,7 @@ code is written entirely in java with maven.
 
 
 
-screenshots of example:
+screenshot of example:
 
 
 ![image](https://github.com/orangejuiceplz/spot50/assets/155986030/853e18da-0125-4a90-8977-ab41d02b934a)
