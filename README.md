@@ -16,8 +16,10 @@ screenshot of example:
 
 instructions for proper download:
 
+todo
 
 
+Collegeboard Create Performance Task Guidelines:
 
 >instructions for input: the program takes user input through the scanner class in the getTopSongs method. the user is told to enter a number between 1 and 50, which represents the position of >a song in the Spotify Top 50 playlist.
 
@@ -32,7 +34,9 @@ instructions for proper download:
 
 >instructions for output: the program outputs the information of the selected songs and their Spotify URLs to the console using java's System.out.println(); function
 
+
 ACKNOWLEDGEMENTS:
+
 
 We used a couple outside resources in our program and We would like to give proper credit to these individuals:
 
