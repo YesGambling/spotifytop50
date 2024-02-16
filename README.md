@@ -41,7 +41,7 @@ example
 
 
 
->Instructions for input: The program takes user input through the Scanner class in the getTopSongs method. The user is prompted to enter a number between 1 and 50, which represents the position of >a song in the Spotify Top 50 playlist.
+>instructions for input: the program takes user input through the scanner class in the getTopSongs method. the user is told to enter a number between 1 and 50, which represents the position of >a song in the Spotify Top 50 playlist.
 
 >Use of at least one list: The program uses two ArrayList objects, songUrls and songInfo, to store the Spotify URLs and information of the selected songs, respectively.
 
