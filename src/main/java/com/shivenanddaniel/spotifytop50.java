@@ -1,35 +1,34 @@
 package com.shivenanddaniel;
-
+// import the SpotifyAPI stuff
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.model_objects.specification.PlaylistTrack;
 import com.wrapper.spotify.model_objects.specification.Track;
 import org.apache.hc.core5.http.ParseException;
-
+// gui elements
 import javax.swing.*;
-//import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+// misc stuff
 import java.io.IOException;
-//import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 public class spotifytop50 {
     private static SpotifyApi spotifyApi;
-    private static List<String> songUrls = new ArrayList<>();
-    private static List<String> songInfo = new ArrayList<>();
+    private static List<String> songUrls = new ArrayList<>(); // create songURl list
+    private static List<String> songInfo = new ArrayList<>(); /// create songInfo list
 
     public static void main(String[] args) {
-        SpotifyAuthenticator authenticator = new SpotifyAuthenticator();
+        SpotifyAuthenticator authenticator = new SpotifyAuthenticator(); // calls to spotify authenticator
         try {
             spotifyApi = authenticator.authenticate();
         } catch (IOException | SpotifyWebApiException | ParseException e) {
-            System.out.println("An error occurred: " + e.getMessage());
+            System.out.println("An error occurred: " + e.getMessage()); // prints error if it fails.
         }
 
         // Create a new JFrame
-        JFrame frame = new JFrame("Spotify Top 50");
+        JFrame frame = new JFrame("Spotify Top 50"); //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920, 1080);
 
@@ -52,7 +51,7 @@ public class spotifytop50 {
     }
 
     private static void getTopSongs() {
-        String playlistId = "37i9dQZEVXbMDoHDwVN2tF";
+        String playlistId = "37i9dQZEVXbMDoHDwVN2tF"; // spotify top 50 playlist
         int limit = 50;
         int offset = 0;
 
