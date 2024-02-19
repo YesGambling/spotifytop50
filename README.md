@@ -14,9 +14,14 @@ screenshot of example:
 
 ![image](https://github.com/orangejuiceplz/spot50/assets/155986030/853e18da-0125-4a90-8977-ab41d02b934a)
 
+
 instructions for proper download:
 
-todo
+1. click on releases
+2. download the .JAR file
+<!> IMPORTANT: YOU NEED JDK 20 TO RUN THIS PROGRAM. YOU ALSO NEED A JRE, IF YOU DON'T KNOW WHERE TO GET ONE, LOOK IT UP <!>
+3. execute the .jar file
+4. enjoy
 
 
 Collegeboard Create Performance Task Guidelines:
