@@ -57,6 +57,7 @@ Various users on stack overflow:
 >IOException - https://stackoverflow.com/questions/5819121/understanding-java-ioexception
 
 >try, catch - https://stackoverflow.com/questions/2535723/try-catch-on-stack-overflows-in-java
+
 This came as a major help when attempting to debug, so this was also very big. 
 
 Oracle:
