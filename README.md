@@ -62,6 +62,8 @@ Oracle:
 
 >InputMistmatchException - https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html
 
+>JButtons - https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html
+
 Apache:
 
 >ParseException - https://commons.apache.org/proper/commons-cli/apidocs/org/apache/commons/cli/ParseException.html
