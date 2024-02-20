@@ -5,7 +5,7 @@ this is a basic spotify 'data scraper' of some sort.
 
 the primary 'goal': utilize spotify's API to grab the top 50 songs on spotify, then allows the users to search through it. 
 
-code is written entirely in java with maven.
+code is written entirely in java with maven as an additon for dependencies building.
 
 
 
@@ -57,8 +57,10 @@ Various users on stack overflow:
 >IOException - https://stackoverflow.com/questions/5819121/understanding-java-ioexception
 
 >try, catch - https://stackoverflow.com/questions/2535723/try-catch-on-stack-overflows-in-java
+This came as a major help when attempting to debug, so this was also very big. 
 
 Oracle:
+>Java Docs in general - https://docs.oracle.com/en/java/
 
 >InputMistmatchException - https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html
 
