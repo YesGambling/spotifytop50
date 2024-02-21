@@ -107,31 +107,44 @@ public class spotifytop50 {
                 // Get the song's Spotify URL and add it to the list
                 String spotifyUrl = track.getExternalUrls().get("spotify");
                 if (spotifyUrl != null) {
+                    
                     songUrls.add(spotifyUrl);
+           
                     songInfo.add(songDetails + "\nURL: " + spotifyUrl);
                 }
             }
 
             // Prompt the user to enter a number
+            
             String input = JOptionPane.showInputDialog("I've searched through the top fifty songs on Spotify. Please enter a number 1-50 to search through the  results:");
-            int songNumber = Integer.parseInt(input);
+           
+            int songNumber = Integer.parseInt(input); // user input (basically, button's scanner)
 
             // Display the details of the selected song
+            
             JOptionPane.showMessageDialog(null, songInfo.get(songNumber - 1));
 
             // Create a yes/no dialog box
+            
             int option = JOptionPane.showConfirmDialog(null, "Do you want to search for another song?", "Continue your search?", JOptionPane.YES_NO_OPTION);
 
             // If the user clicks 'Yes', call getTopSongs again
+            
             if (option == JOptionPane.YES_OPTION) {
+            
                 getTopSongs();
+            
             } else {
+            
                 // If the user clicks 'No', display all of the songs with the info collected in the list
+                
                 for (String info : songInfo) {
+                
                     System.out.println(info);
                 }
             }
         } catch (IOException | SpotifyWebApiException | ParseException e) {
+            
             System.out.println("Yo, we encountered an error: " + e.getMessage());
         }
     }
