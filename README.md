@@ -1,9 +1,9 @@
-hi!!!
+wsg gang
 
 
-this is a basic spotify 'data scraper' of some sort.
+this is a basic spotify 'data scraper' of some sort that we cooked up in the basement yo.
 
-the primary 'goal': utilize spotify's API to grab the top 50 songs on spotify, then allows the users to search through it. 
+the primary 'goal': utilize spotify's API to grab the top 50 songs on spotify, then allows the users to search through it. it gives the details of the songs when you're done.
 
 code is written entirely in java with maven as an additon for dependencies building.
 
@@ -14,6 +14,7 @@ screenshot of example:
 
 ![image](https://github.com/orangejuiceplz/spot50/assets/155986030/853e18da-0125-4a90-8977-ab41d02b934a)
 
+Java 20 is needed, however, in the future, we will plan on adding other Java version support.
 
 instructions for proper download:
 
@@ -26,24 +27,23 @@ instructions for proper download:
 
 Collegeboard Create Performance Task Guidelines:
 
->instructions for input: the program takes user input through the scanner class in the getTopSongs method. the user is told to enter a number between 1 and 50, which represents the position of a song in the Spotify Top 50 playlist.
+>instructions for input: the program uses instructions for input by taking the input from the user through a button click even in the gui, and it prompts the user to enter a number.
 
->Use of at least one list: The program uses two ArrayList objects, songUrls and songInfo, to store the Spotify URLs and information of the selected songs, respectively.
+>use of at least one list: the program uses two ArrayList objects, songUrls and songInfo, to store the Spotify URLs and information of the selected songs, respectively.
 
->At least one student-developed procedure: The getTopSongs method is a student-developed procedure that fetches the top 50 songs from a Spotify playlist and allows the user to access information about a song by its position in the playlist.
+>at least one student-developed procedure: the getTopSongs method is the student-developed procedure that we made that gets the top 50 songs from a Spotify playlist and allows the user to access information about a song by its position in the playlist at the current time.
 
->An algorithm that includes sequencing, selection, and iteration: The getTopSongs method includes a while loop (iteration) that continues to prompt the user for more songs until they decide to stop. inside the loop, there’s an if-else statement (selection) that checks if the user’s 
->input is valid. the method also includes a sequence of operations to fetch the songs, get the song information, and add it to the list.
+>An algorithm that includes sequencing, selection, and iteration:  the getTopSongs method includes an algorithm that uses sequencing (the order of operations), selection (the try block), and iteration (the for loop) to complete its job.
 
->calls to your student-developed procedure: The getTopSongs method is called in the main method.
+>calls to your student-developed procedure: The getTopSongs method is called when the button is clicked.
 
->instructions for output: the program outputs the information of the selected songs and their Spotify URLs to the console using java's System.out.println(); function
+>instructions for output: the program outputs the information of the selected songs and their Spotify URLs to their screen by printing it out using System.out.println()
 
 
 ACKNOWLEDGEMENTS:
 
 
-We used a couple outside resources in our program and We would like to give proper credit to these individuals:
+we used a couple outside resources in our program and We would like to give proper credit to these individuals:
 
 Thelinmicheal - his Java wrapper for the spotify API.
 
