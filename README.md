@@ -1,6 +1,5 @@
 wsg gang
 
-
 this is a basic spotify 'data scraper' of some sort that we cooked up in the basement yo.
 
 the primary 'goal': utilize spotify's API to grab the top 50 songs on spotify, then allows the users to search through it. it gives the details of the songs when you're done.
@@ -12,7 +11,7 @@ code is written entirely in java with maven as an additon for dependencies build
 screenshot of example:
 
 
-![image](https://github.com/orangejuiceplz/spot50/assets/155986030/853e18da-0125-4a90-8977-ab41d02b934a)
+// update example
 
 Java 20 is needed, however, in the future, we will plan on adding other Java version support.
 
