@@ -72,7 +72,7 @@ Apache:
 
 And of course:
 
-Spotify Developer Docs 
+Spotify Developer Docs - web API
 
 >https://developer.spotify.com/documentation/web-api
 
