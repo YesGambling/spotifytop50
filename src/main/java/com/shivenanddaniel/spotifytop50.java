@@ -9,8 +9,11 @@ import org.apache.hc.core5.http.ParseException;
 
 // import the gui classes
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 // import the IO and utility classes
 import java.io.IOException;
@@ -53,6 +56,8 @@ public class spotifytop50 {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // show a loading message
+                JOptionPane.showMessageDialog(frame, "Loading... Please wait.", "Loading", JOptionPane.INFORMATION_MESSAGE);
                 getTopSongs();
             }
         });
@@ -101,30 +106,67 @@ public class spotifytop50 {
                 }
             }
 
-            // prompt the user to enter a number to search through the results
-            String input = JOptionPane.showInputDialog("I've searched through the top fifty songs on Spotify. Please enter a number 1-50 to search through the  results:");
-            
-            // parse the user's input to an integer
-            int songNumber = Integer.parseInt(input);
+            // call the searchSong method after getting the top 50 songs
+            searchSong();
 
-            // display the details of the selected song in a dialog box
-            JOptionPane.showMessageDialog(null, songInfo.get(songNumber - 1));
-
-            // create a yes/no dialog box asking the user if they want to search for another song
-            int option = JOptionPane.showConfirmDialog(null, "Do you want to search for another song?", "Continue your search?", JOptionPane.YES_NO_OPTION);
-
-            // if the user clicks 'Yes', call to the getTopSongs method again
-            if (option == JOptionPane.YES_OPTION) {
-                getTopSongs();
-            } else {
-                // if the user clicks 'No', print all of the song information collected in the list to the console
-                for (String info : songInfo) {
-                    System.out.println(info);
-                }
-            }
         } catch (IOException | SpotifyWebApiException | ParseException e) {
             // print any errors that occur to the console
             System.out.println("Yo, we encountered an error: " + e.getMessage());
         }
     }
+
+    // method to search for a song
+    // this method prompts the user to enter a number to search through the results
+    // then it displays the details of the selected song in a dialog box
+    // finally, it asks the user if they want to search for another song
+    // if the user clicks 'Yes', it calls itself recursively
+    // if the user clicks 'No', it prints all of the song information collected in the list to the console
+    private static void searchSong() {
+        String input = JOptionPane.showInputDialog("I've searched through the top fifty songs on Spotify. Please enter a number 1-50 to search through the results:");
+        int songNumber = Integer.parseInt(input);
+
+        // create a new JFrame for the song information
+        JFrame infoFrame = new JFrame("Song Information");
+        infoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        infoFrame.setSize(500, 200);
+
+        // create a JTextArea to display the song information
+        JTextArea textArea = new JTextArea(songInfo.get(songNumber - 1));
+        textArea.setEditable(false);
+
+        // create a JButton for the Spotify link
+        JButton spotifyButton = new JButton("Listen on Spotify");
+        spotifyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // open the song's Spotify URL in the user's default browser
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    try {
+                        Desktop.getDesktop().browse(new URI(songUrls.get(songNumber - 1)));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+
+                    // ask the user if they want to search for another song
+                    int option = JOptionPane.showConfirmDialog(null, "Do you want to search for another song?", "Continue your search?", JOptionPane.YES_NO_OPTION);
+                    if (option == JOptionPane.YES_OPTION) {
+                        searchSong();
+                    } else {
+                        for (String info : songInfo) {
+                            System.out.println(info);
+                        }
+                    }
+                }
+            }
+        });
+
+        // add the JTextArea and JButton to the JFrame
+        infoFrame.getContentPane().add(textArea, BorderLayout.CENTER);
+        infoFrame.getContentPane().add(spotifyButton, BorderLayout.SOUTH);
+
+        // make the JFrame visible
+        infoFrame.setVisible(true);
+    }
 }
+
+
