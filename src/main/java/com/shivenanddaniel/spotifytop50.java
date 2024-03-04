@@ -151,6 +151,7 @@ public class spotifytop50 {
                     int option = JOptionPane.showConfirmDialog(null, "Do you want to search for another song?", "Continue your search?", JOptionPane.YES_NO_OPTION);
                     if (option == JOptionPane.YES_OPTION) {
                         searchSong();
+                        // calls to the searchSong method to repeat the process again
                     } else {
                         for (String info : songInfo) {
                             System.out.println(info);
