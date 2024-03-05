@@ -1,13 +1,13 @@
 package com.shivenanddaniel;
 
-// import the SpotifyAPI classes
+// import the SpotifyAPI classes - we are allowed to do this because we added the dependency in the pom.xml w/ maven.
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.model_objects.specification.PlaylistTrack;
 import com.wrapper.spotify.model_objects.specification.Track;
 import org.apache.hc.core5.http.ParseException;
 
-// import the gui classes
+// import the gui classes - we will use this for the button(s). 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,14 +15,14 @@ import java.awt.event.ActionListener;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-// import the IO and utility classes
+// import the IO and utility classes - handles data and errors
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class spotifytop50 {
 
-    // Spotify API instance
+    // Spotify API instance - we call this from the SpotifyAuthenticator class
     private static SpotifyApi spotifyApi;
     
     // list to store song URLs
@@ -44,12 +44,12 @@ public class spotifytop50 {
             System.out.println("Whoops! An error occured: " + e.getMessage());
         }
 
-        // create a new JFrame with the title "Spotify Top 50"
+        // create a new JFrame with the title "Spotify Top 50" - JFrame is the 'gui' aspect.
         JFrame frame = new JFrame("Spotify Top 50");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920, 1080);
 
-        // create a new JButton with a label
+        // create a new JButton prompting the user to tell it what to do.
         JButton button = new JButton("Click here to get the top songs on Spotify (This may take a bit)");
 
         // add an ActionListener to the button that calls the getTopSongs method when clicked
@@ -110,7 +110,7 @@ public class spotifytop50 {
             searchSong();
 
         } catch (IOException | SpotifyWebApiException | ParseException e) {
-            // print any errors that occur to the console
+            // print any errors that occur to the screen if it fails to get the information
             System.out.println("Yo, we encountered an error: " + e.getMessage());
         }
     }
@@ -119,8 +119,8 @@ public class spotifytop50 {
     // this method prompts the user to enter a number to search through the results
     // then it displays the details of the selected song in a dialog box
     // finally, it asks the user if they want to search for another song
-    // if the user clicks 'Yes', it calls itself recursively
-    // if the user clicks 'No', it prints all of the song information collected in the list to the console
+    // if the user clicks 'Yes', it calls itself again
+    // if the user clicks 'No', it prints all of the song information collected in the list to the screen
     private static void searchSong() {
         String input = JOptionPane.showInputDialog("I've searched through the top fifty songs on Spotify. Please enter a number 1-50 to search through the results:");
         int songNumber = Integer.parseInt(input);
