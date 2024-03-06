@@ -19,7 +19,7 @@ instructions for proper download:
 
 1. click on releases
 2. download the .JAR file
-<!> IMPORTANT: YOU NEED [JDK 20](https://download.oracle.com/java/20/archive/jdk-20.0.2_windows-x64_bin.exe) and [JRE] (https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4)
+<!> IMPORTANT: YOU NEED [JDK 20](https://download.oracle.com/java/20/archive/jdk-20.0.2_windows-x64_bin.exe) and [JRE](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4)
 3. execute the .jar file
 4. enjoy
 
